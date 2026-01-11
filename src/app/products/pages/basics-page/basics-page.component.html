@@ -1,0 +1,61 @@
+<p-panel header="Pipes básicos" class="p-1">
+  <p>
+    Pipes incluídos en Angular - Usualmente en el Common Module
+  </p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{nameLower | lowercase}}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="lowercase">
+      {{nameUpper | uppercase}}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="titlecase">
+      {{fullName | titlecase}}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="titlecase">
+      <ol>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | short</li>
+        <li>fecha | long</li>
+        <li>fecha | MMMM</li>
+        <li>fecha | MMMM dd, yyyy</li>
+      </ol>
+
+      <hr>
+
+      <ol>
+        <li>fecha | date:'long':'GTM-3' </li>
+        <li>fecha | date:'long':'':'es-AR'</li>
+      </ol>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="titlecase">
+      <ol>
+        <li>{{customDare}}</li>
+        <li>{{customDare  | date}}</li>
+        <li>{{customDare  | date: 'short' }}</li>
+        <li>{{customDare  | date: 'long' }}</li>
+        <li>{{customDare  | date: 'MMMM' }}</li>
+        <li>{{customDare  | date: 'MMMM dd, yyyy' }}</li>
+      </ol>
+
+      <hr>
+
+      <ol>
+        <li>{{customDare | date:'long':'GTM-3' }}</li>
+        <li>{{customDare | date:'long':'':'es-AR' }}</li>
+      </ol>
+    </p-card>
+  </div>
+</div>
